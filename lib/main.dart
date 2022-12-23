@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'examples/stack_demo.dart';
+import 'examples/user_input_from_keyword.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const StackDemo(),
+      home: const UserInput(),
     );
   }
 }
