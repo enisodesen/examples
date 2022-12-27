@@ -18,7 +18,10 @@ class _SimpleSliderDemoState extends State<SimpleSliderDemo> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text(_currentValue.toString()),
+          Text(
+            _currentValue.toString(),
+            style: const TextStyle(fontSize: 50),
+          ),
           Slider(
               value: _currentValue,
               min: 0,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'examples/date_picker.dart';
+import 'examples/register_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const DatePickDemo(),
+      home: const RegisterPage(),
     );
   }
 }
