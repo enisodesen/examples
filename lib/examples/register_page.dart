@@ -57,28 +57,47 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(
                 height: 10,
               ),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const RegistrationPage()),
-                    );
-                  },
-                  child: const Text('CREATE')),
-              ElevatedButton(
-                  onPressed: () {
-                    nameController.clear();
-                    userNameController.clear();
-                    emailController.clear();
-                    passwordController.clear();
-                  },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue[300]),
-                  child: const Text(
-                    'CLEAR',
-                    style: TextStyle(fontSize: 12),
-                  )),
+              Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 100),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue[100],
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20))),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RegistrationPage()),
+                          );
+                        },
+                        child: Text(
+                          'CREATE',
+                          style:
+                              TextStyle(fontSize: 20, color: Colors.blue[700]),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const Text(
+                '- OR -',
+                style: TextStyle(color: Colors.white, fontSize: 12),
+              ),
+              InkWell(
+                onTap: () {
+                  nameController.clear();
+                  userNameController.clear();
+                  emailController.clear();
+                  passwordController.clear();
+                },
+                child: const Text('CLEAR',
+                    style: TextStyle(color: Colors.white, fontSize: 18)),
+              ),
             ],
           ),
         ),
